@@ -15,7 +15,7 @@ $(document).ready(function () {
       return item.toUpperCase();
     });
     upperList.forEach(function (item) {
-      $(".results").append("<li>" + item + "<li>");
+      $("#list").append("<li>" + item + "</li>");
     });
     $(".results").show();
   });
