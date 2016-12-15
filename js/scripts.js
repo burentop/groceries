@@ -7,8 +7,16 @@ $(document).ready(function () {
     formItems.forEach(function (formItem) {
       var toInsert = $("#" + formItem).val();
       if (toInsert) {
-
+        shoppingList.push(toInsert);
       }
-    })
-  })
-})
+    });
+    shoppingList.sort();
+    var upperList = shoppingList.map(function (item) {
+      return item.toUpperCase();
+    });
+    upperList.forEach(function (item) {
+      $(".results").append("<li>" + item + "<li>");
+    });
+    $(".results").show();
+  });
+});
